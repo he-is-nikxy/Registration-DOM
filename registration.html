@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+    
+	<script type="text/javascript">
+		function showName() {
+			// Show filled name inside h1
+            let name = document.querySelector("#name");
+            let dName = document.querySelector("#dName");
+            dName.innerText = name.value;
+            console.log(dName.innerText);
+            
+            
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+            let gender = document.querySelector("#gender");
+            let dGender = document.querySelector("#dGender");
+            dGender.innerText = gender.value;
+            console.log(dGender.innerText);
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+            let email = document.querySelector("#email");
+            let dEmail = document.querySelector("#dEmail");
+            dEmail.innerText = email.value;
+            console.log(dEmail.innerText);
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+            let mobile = document.querySelector("#mobile");
+            let dMobile = document.querySelector("#dMobile");
+            dMobile.innerText = mobile.value;
+            console.log(dMobile.innerText);
+		}
+        
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+            let resetName = document.querySelector("#name").value = "";
+            let resetGender = document.querySelector("#gender").value = "";
+            let resetEmail = document.querySelector("#email").value = "";
+            let resetMobile = document.querySelector("#mobile").value = "";
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+            let displayName = document.querySelector("#dName").innerText = "";
+            let displayGender = document.querySelector("#dGender").innerText = "";
+			let displayEmail = document.querySelector("#dEmail").innerText = "";
+			let displayMobile = document.querySelector("#dMobile").innerText = "";
+		}
+	</script>
+</body>
+</html>
